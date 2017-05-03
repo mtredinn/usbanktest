@@ -1,0 +1,32 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "Get Weather"
+    },
+    "paths": {
+        "/weather": {
+            "get": {
+                "description": "Used to fetch the weather",
+                "parameters": [
+                    {
+                        "name": "areaCode",
+                        "in": "query",
+                        "description": "The lookup area code.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "title": "Weather",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

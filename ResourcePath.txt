@@ -1,0 +1,4 @@
+/api/ec19ed0ea3b86680/geolookup/conditions/q/{zipCode}.json
+
+For Flogo Invoke:
+http://api.wunderground.com/api/ec19ed0ea3b86680/geolookup/conditions/q/:zipCode/.json

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1482359211563" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1482359211563">
+  <complexType name="WUConditionsElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="response">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="version" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="termsofService" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="features">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="geolookup" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="conditions" type="integer"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="location">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country_iso3166" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country_name" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="tz_short" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="tz_long" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="lat" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="lon" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="zip" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="magic" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wmo" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="l" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="requesturl" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wuiurl" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="nearby_weather_stations">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="airport">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="station">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="icao" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="lat" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="lon" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="pws">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="station">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="neighborhood" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="lat" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="lon" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="distance_km" type="integer"/>
+                              <element maxOccurs="1" minOccurs="0" name="distance_mi" type="integer"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="current_observation">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="image">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="title" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="link" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="display_location">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="full" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="state_name" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="country_iso3166" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="zip" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="magic" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="wmo" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="latitude" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="longitude" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="elevation" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="observation_location">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="full" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="country_iso3166" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="latitude" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="longitude" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="elevation" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="estimated">
+              
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="station_id" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="observation_time" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="observation_time_rfc822" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="observation_epoch" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="local_time_rfc822" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="local_epoch" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="local_tz_short" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="local_tz_long" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="local_tz_offset" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="weather" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="temperature_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="temp_f" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="temp_c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="relative_humidity" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_dir" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_degrees" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_mph" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_gust_mph" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_kph" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="wind_gust_kph" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="pressure_mb" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="pressure_in" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="pressure_trend" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dewpoint_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="dewpoint_f" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="dewpoint_c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="heat_index_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="heat_index_f" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="heat_index_c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="windchill_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="windchill_f" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="windchill_c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="feelslike_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="feelslike_f" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="feelslike_c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="visibility_mi" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="visibility_km" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="solarradiation" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="UV" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_1hr_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_1hr_in" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_1hr_metric" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_today_string" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_today_in" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="precip_today_metric" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="icon" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="icon_url" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="forecast_url" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="history_url" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ob_url" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="nowcast" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="WUConditionsElement" type="tns:WUConditionsElementType"/>
+</schema>

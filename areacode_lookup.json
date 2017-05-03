@@ -1,0 +1,65 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "com.tibco.demo.areacode.lookup"
+  },
+  "host" : "54.146.244.23:8081",
+  "schemes" : [ "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/areacode/{areaCode}" : {
+      "get" : {
+        "tags" : [ "areacode" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "areaCode",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Sample Description",
+            "schema" : {
+              "$ref" : "#/definitions/AreaCodeInfo"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "AreaCodeInfo" : {
+      "required" : [ "AreaCode", "Lat", "Long" ],
+      "type" : "object",
+      "properties" : {
+        "AreaCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "City" : {
+          "type" : "string"
+        },
+        "State" : {
+          "type" : "string"
+        },
+        "PostalCode" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "Lat" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "Long" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    }
+  }
+}
